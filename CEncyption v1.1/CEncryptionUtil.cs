@@ -44,7 +44,7 @@ namespace CEncyption_v1._1
                 {
                     bytes[i] = (byte)(bytes[i] - workFactor * (passwordBytes[passwordShiftIndex] + seed ^
                         (workFactor % (iterationValue + seed))));
-                    passwordShiftIndex = (passwordShiftIndex + 1) % passwordBytes.Length;
+                    passwordShiftIndex = (passwordShiftIndex + 4) % passwordBytes.Length;
                 }
             }
 
@@ -72,7 +72,7 @@ namespace CEncyption_v1._1
                 {
                     bytes[i] = (byte)(bytes[i] - workFactor * (passwordBytes[passwordShiftIndex] + seed ^
                         (workFactor % (iterationValue + seed))));
-                    passwordShiftIndex = (passwordShiftIndex + 1) % passwordBytes.Length;
+                    passwordShiftIndex = (passwordShiftIndex + 4) % passwordBytes.Length;
                 }
             }
 
@@ -111,7 +111,7 @@ namespace CEncyption_v1._1
                 {
                     bytes[i] = (byte)(bytes[i] + workFactor * (passwordBytes[passwordShiftIndex] + seed ^
                         (workFactor % (iterationValue + seed))));
-                    passwordShiftIndex = (passwordShiftIndex + 1) % passwordBytes.Length;
+                    passwordShiftIndex = (passwordShiftIndex + 4) % passwordBytes.Length;
                 }
             }
             return bytes;
