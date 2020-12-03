@@ -129,7 +129,7 @@ namespace CEncyption_v1._1
         private Aes aesA;
 
         /// <summary>
-        /// Creates an random key.
+        /// Creates an random key using AES.
         /// </summary>
         /// <param name="iterations">How many times it should shuffle the key.</param>
         /// <returns></returns>
@@ -177,7 +177,7 @@ namespace CEncyption_v1._1
         }
 
         /// <summary>
-        /// Creates an key returned in bytes.
+        /// Creates an key returned in bytes, using AES.
         /// </summary>
         /// <param name="iterations">How many times it should shuffle the returned key.</param>
         /// <returns>byte[]</returns>
